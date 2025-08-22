@@ -27,14 +27,13 @@ public class castor {
     }
     
     public void nadar (){
-        System.out.println("Nada a la velidad de " + velocidad + "km/hora");
-        
+        System.out.println("Nada a la velidad de " + velocidad + "km/hora");  
     }
     
     public void tocarGuitarra (){
-        
     }
 
     
 }
+
 
