@@ -5,7 +5,7 @@ public class castor {
     private double velocidad;
     private double longitudDeCola;
 
-    public Castor(double velocidad, double longitudDeCola) {
+    public castor(double velocidad, double longitudDeCola) {
         this.velocidad = velocidad;
         this.longitudDeCola = longitudDeCola;
     }
@@ -35,5 +35,6 @@ public class castor {
 
     
 }
+
 
 
