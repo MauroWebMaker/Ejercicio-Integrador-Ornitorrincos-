@@ -1,7 +1,10 @@
 import java.util.Random;
+import java.util.Scanner;
 public class OrnitorrincoAzul extends Castor {
     // dos pibes azules, pero en el main se instancian.
+    
     private double propulsion;
+    Scanner t1 = new Scanner(System.in);
 
     public OrnitorrincoAzul(double propulsion, double velocidad, double longitudDeCola) {
         super(velocidad, longitudDeCola);
@@ -52,12 +55,8 @@ public class OrnitorrincoAzul extends Castor {
         }
     }
 
-    @Override
-    public void tocarOrgano() {
-        /* aca no entendi muy bien, la consigna dice 
-        "tocarOrgano": imprime “Do-Re-Mi” (use scanner para esperar a que se oprima una tecla) y luego “Fa-Sol-La-Si”.
-        */
-    }
+   
+   
 
     
     

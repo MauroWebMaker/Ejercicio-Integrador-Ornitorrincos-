@@ -1,12 +1,11 @@
 
-
-public abstract class Castor implements Pata {
+public class castor {
     //superclase esta
 
-    protected double velocidad;
-    protected double longitudDeCola;
+    private double velocidad;
+    private double longitudDeCola;
 
-    public Castor(double velocidad, double longitudDeCola) {
+    public castor(double velocidad, double longitudDeCola) {
         this.velocidad = velocidad;
         this.longitudDeCola = longitudDeCola;
     }
@@ -26,11 +25,16 @@ public abstract class Castor implements Pata {
     public void setLongitudDeCola(double longitudDeCola) {
         this.longitudDeCola = longitudDeCola;
     }
-
-    public abstract void nadar ();
     
-    public abstract void tocarGuitarra ();
+    public void nadar (){
+        System.out.println("Nada a la velocidad de " + velocidad + "km/hora");  
+    }
+    
+    public void tocarGuitarra (){
+    }
 
     
 }
+
+
 
