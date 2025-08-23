@@ -44,7 +44,7 @@ public class OrnitorrincoAzul extends Castor {
 
     @Override
     public void nadar() {
-        double propulsion = 5 + Math.random() * 5;
+        double propulsion = 5 + Math.random() * 5;/ / aca deberiamos ponerlo como lo pide el ejercicioo, mediante entrada de scanner.
         double velocidadTotal = getVelocidad() + getPropulsion();
         System.out.println("Velocidad total de nado: " + velocidadTotal + " km/s." + "(La propulsiuon de su cola fue de: )" + getPropulsion());
     }
