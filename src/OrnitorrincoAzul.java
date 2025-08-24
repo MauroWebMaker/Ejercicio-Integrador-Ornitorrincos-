@@ -56,6 +56,7 @@ public class OrnitorrincoAzul extends Castor {
         this.propulsion = pr;
         double velocidadTotal = getVelocidad() + getPropulsion();
         System.out.println("Velocidad total de nado: " + velocidadTotal + " km/h." + " La propulsiuon de su cola fue de:" + getPropulsion() + " km/s.");
+        super.setVelocidad(velocidadTotal);
     }
 
     @Override
@@ -68,7 +69,6 @@ public class OrnitorrincoAzul extends Castor {
     }
 
     @Override
-    // lo saque de OrnitorrincoVerde, y ni idea porque me deja, no esta implementada pata aca JAJAJ
 
     public void tocarOrgano() {
         System.out.println("Do-Re-Mi");

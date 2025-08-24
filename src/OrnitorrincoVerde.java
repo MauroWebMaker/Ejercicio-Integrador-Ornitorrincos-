@@ -59,4 +59,5 @@ public class OrnitorrincoVerde extends Castor implements Pata {
         }while(aux < 1 || aux > 8);
         super.setVelocidad(aux);
     }
+    
 }

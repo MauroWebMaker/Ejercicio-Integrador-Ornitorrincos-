@@ -1,5 +1,6 @@
 
 public abstract class Castor implements Pata {
+    
     protected String nombre;
     protected double velocidad;
     protected double longitudDeCola;
