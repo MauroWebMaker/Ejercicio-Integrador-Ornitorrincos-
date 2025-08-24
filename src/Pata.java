@@ -5,6 +5,4 @@ public interface Pata {
     double patas = 7.5;
 
     void tocarOrgano();
-
-    //interfaz esta
 }

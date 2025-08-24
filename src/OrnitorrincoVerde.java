@@ -3,24 +3,27 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class OrnitorrincoVerde extends Castor implements Pata {
-
     Scanner t1 = new Scanner(System.in);
 
-    public OrnitorrincoVerde(double velocidad, double longitudDeCola) {
-        super(velocidad, longitudDeCola);
+    public OrnitorrincoVerde(){
+        
+    }
+    
+    public OrnitorrincoVerde(double velocidad, double longitudDeCola, String nombre) {
+        super(velocidad, longitudDeCola, nombre);
     }
 
     @Override
-    // este lo tuve que poner porque sino pedia que haga la clase sea abstracta...
     public void nadar() {
+        System.out.println("\n" + nombre + " nadando...\n\n");
         double velocidadTotal = getVelocidad();
-        System.out.println("Velocidad total de nado: " + velocidadTotal);
+        System.out.println("Velocidad total de nado: " + velocidadTotal + " km/h.");
     }
 
     @Override
     public void tocarOrgano() {
         System.out.println("Do-Re-Mi");
-        System.out.println("Presione enter para continuar");
+        System.out.println("Presione enter para continuar...");
         t1.nextLine();
         System.out.println("Fa-Sol-La-Si");
     }
@@ -33,11 +36,27 @@ public class OrnitorrincoVerde extends Castor implements Pata {
             System.out.println("toca cuerda " + cuerda);
         }
     }
-
+    
+    @Override
     public void tocarGuitorgan() {
         tocarOrgano();
         tocarGuitarra();
         System.out.println("--------------");
         System.out.println("Cuac Cuac!");
+    }
+    
+    @Override
+    public void agregarDatos(){
+        System.out.println("Ingrese el nombre del ornitorrinco verde: ");
+        super.setNombre(t1.nextLine());
+        System.out.println("Ingrese enter para continuar...");
+        t1.nextLine();
+        System.out.println("Ingrese la velocidad de nado de " + super.getNombre() + ": ");
+        double aux = 0;
+        do{
+            System.out.println("(La velocidad tiene que ser de 1 a 8 km/h)");
+            aux = t1.nextDouble();
+        }while(aux < 1 || aux > 8);
+        super.setVelocidad(aux);
     }
 }
