@@ -2,11 +2,14 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 public class main {
 
     public static void main(String[] args) {
+        Scanner t1 = new Scanner(System.in);
 
         Castor o1 = new OrnitorrincoVerde();
         Castor o2 = new OrnitorrincoAzul();
@@ -37,8 +40,12 @@ public class main {
             familiaUnida[2] = o3;
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Error: te saliste del rango del arreglo. " + e.getMessage());
+            System.out.println("Presione enter para continuar...");
+            t1.nextLine();
         } finally {
             System.out.println("Los ornitohermanos juntos al fin...");
+            System.out.println("Presione enter para continuar...");
+            t1.nextLine();
         }
         
         //Velocidad total Lista
@@ -60,6 +67,8 @@ public class main {
         for (Castor x : nadadores) {
             System.out.println(x.getNombre() + " con una velocidad de: "+ x.getVelocidad()+" km/h");
         }
+        System.out.println("Presione enter para continuar...");
+        t1.nextLine();
         
         //Propulsion total lista
  
@@ -74,9 +83,13 @@ public class main {
             }
         });
 
+        Iterator<Castor> it = nadadores.iterator();
         System.out.println("\n Por Propulsion ordenados ascendentemente son: ");
-        for (Castor x : propulsion) {
-            System.out.println(x.getNombre() + " con una propulsion de: "+ ((OrnitorrincoAzul)x).getPropulsion() +" km/h");
+        while(it.hasNext()){
+            Castor nadadore = it.next();
+            System.out.println(nadadore.getNombre() + ", Propulsion: " + ((OrnitorrincoAzul)nadadore).getPropulsion());
         }
+        System.out.println("Presione enter para continuar...");
+        t1.nextLine();
     }
 }

@@ -18,31 +18,42 @@ public class OrnitorrincoVerde extends Castor implements Pata {
         System.out.println("\n" + nombre + " nadando...\n\n");
         double velocidadTotal = getVelocidad();
         System.out.println("Velocidad total de nado: " + velocidadTotal + " km/h.");
+        System.out.println("Presione enter para continuar...");
+        t1.nextLine();
     }
 
     @Override
     public void tocarOrgano() {
+        System.out.println("\n" + this.nombre + " esta tocando el organo...");
         System.out.println("Do-Re-Mi");
         System.out.println("Presione enter para continuar...");
         t1.nextLine();
         System.out.println("Fa-Sol-La-Si");
+        System.out.println("Presione enter para continuar...");
+        t1.nextLine();
     }
 
     @Override
     public void tocarGuitarra() {
         Random random = new Random();
+        System.out.println("\n" + this.nombre + " esta tocando el guitarra...");
         for (int i = 0; i < 3; i++) {
             int cuerda = random.nextInt(6) + 1;
             System.out.println("toca cuerda " + cuerda);
         }
+        System.out.println("Presione enter para continuar...");
+        t1.nextLine();
     }
     
     @Override
     public void tocarGuitorgan() {
+        System.out.println("\n" + this.nombre + " esta tocando el guitorgan...");
         tocarOrgano();
         tocarGuitarra();
         System.out.println("--------------");
         System.out.println("Cuac Cuac!");
+        System.out.println("Presione enter para continuar...");
+        t1.nextLine();
     }
     
     @Override
@@ -58,6 +69,8 @@ public class OrnitorrincoVerde extends Castor implements Pata {
             aux = t1.nextDouble();
         }while(aux < 1 || aux > 8);
         super.setVelocidad(aux);
+        System.out.println("Presione enter para continuar...");
+        t1.nextLine();
     }
     
 }

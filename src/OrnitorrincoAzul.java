@@ -55,33 +55,42 @@ public class OrnitorrincoAzul extends Castor {
         }while(pr < 5 || pr > 10);
         this.propulsion = pr;
         double velocidadTotal = getVelocidad() + getPropulsion();
-        System.out.println("Velocidad total de nado: " + velocidadTotal + " km/h." + " La propulsiuon de su cola fue de:" + getPropulsion() + " km/s.");
+        System.out.println("Velocidad total de nado: " + velocidadTotal + " km/h." + " La propulsiuon de su cola fue de: " + getPropulsion() + " km/s.");
         super.setVelocidad(velocidadTotal);
+        System.out.println("Presione enter para continuar...");
+        t1.nextLine();
     }
 
     @Override
     public void tocarGuitarra() {
+        System.out.println("\n\n" + this.nombre + " esta tocando la guitarra...");
         Random random = new Random();
         for (int i = 0; i < 3; i++) {
             int cuerda = random.nextInt(6) + 1;
             System.out.println("toca cuerda " + cuerda);
         }
+        System.out.println("Presione enter para continuar...");
+        t1.nextLine();
     }
 
     @Override
 
     public void tocarOrgano() {
+        System.out.println("\n\n" + this.nombre + " esta tocando el organo...");
         System.out.println("Do-Re-Mi");
         System.out.println("Presione enter para continuar");
         t1.nextLine();
         System.out.println("Fa-Sol-La-Si");
+        
+        System.out.println("Presione enter para continuar...");
+        t1.nextLine();
     }
     
     @Override
     public void agregarDatos(){
         System.out.println("Ingrese el nombre del ornitorrinco azul: ");
         super.setNombre(t1.nextLine());
-        System.out.println("Ingrese enter para continuar...");
+        System.out.println("Presione enter para continuar...");
         t1.nextLine();
         System.out.println("Ingrese la velocidad de nado de " + super.getNombre() + ": ");
         double aux = 0;
@@ -90,5 +99,7 @@ public class OrnitorrincoAzul extends Castor {
             aux = t1.nextDouble();
         }while(aux < 1 || aux > 8);
         super.setVelocidad(aux);
+        System.out.println("Presione enter para continuar...");
+        t1.nextLine();
     }
 }
